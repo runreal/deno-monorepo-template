@@ -5,11 +5,17 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 ## Directory Structure
 
 `├──` [`apps`]
+
 `  ├──` [`api`] : Hono + Trpc
+
 `  ├──` [`spa`] : React + Vite + Tanstack Router + Tanstack Query + Trpc
+
 `  ├──` [`supabase`] : Supabase
+
 `├──` [`packages`]
+
 `  ├──` [`db`] : Drizzle
+
 `  ├──` [`add`] : Simple lib
 
 ## quickstart
