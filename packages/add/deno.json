@@ -1,0 +1,11 @@
+{
+	"name": "@workspace/add",
+	"version": "0.1.0",
+	"exports": "./mod.ts",
+	"fmt": {
+		"semiColons": false
+	},
+	"tasks": {
+		"dev": "deno run -A --watch mod.ts"
+	}
+}

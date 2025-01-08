@@ -1,0 +1,14 @@
+{
+	"name": "@workspace/api",
+	"exports": "./index.ts",
+	"tasks": {
+		"dev": "deno run -A --env-file --watch src/index.ts"
+	},
+
+	"imports": {
+		"hono": "npm:hono@4.6.14",
+		"zod": "npm:zod@3.24.1",
+		"@hono/trpc-server": "npm:@hono/trpc-server@0.3.4",
+		"@trpc/server": "npm:@trpc/server@11.0.0-rc.682"
+	}
+}
