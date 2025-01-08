@@ -1,6 +1,6 @@
-# Deno Monorepo Starter kit
+# Deno Monorepo Starter Kit
 
-Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, Tanstack Query, Hono, Trpc, Drizzle, Supabase, and more.
+Fully type safe monorepo starter kit with Deno, React, Vite, Tanstack Router, Tanstack Query, Hono, Trpc, Drizzle, Supabase, and more.
 
 ## Directory Structure
 
@@ -16,7 +16,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 
 `  ├──` [`db`] : Drizzle
 
-`  ├──` [`add`] : Simple lib
+`  ├──` [`lib`] : Simple lib
 
 ## quickstart
 

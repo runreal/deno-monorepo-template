@@ -4,23 +4,22 @@
     "./apps/supabase",
     "./apps/spa",
     "./packages/db",
-    "./packages/add"
+    "./packages/lib"
   ],
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "strict": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "dom.asynciterable",
-      "deno.ns",
-      "deno.unstable"
-    ]
-  },
-
   "nodeModulesDir": "auto",
   "unstable": ["unsafe-proto"],
+  "compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"strict": true,
+		"lib": [
+		  "dom",
+		  "dom.iterable",
+		  "dom.asynciterable",
+		  "deno.ns",
+		  "deno.unstable"
+		]
+	  },
   "tasks": {
     // -- CHORES --
     "clean": "rm -rf node_modules",
@@ -28,6 +27,13 @@
     // -- DEV --
     "dev:api": "deno task --cwd apps/api dev",
     "dev:web": "deno task --cwd apps/spa dev",
+
+    // -- DB --
+    "db:generate": "deno task --cwd packages/db db:generate",
+    "db:migrate": "deno task --cwd packages/db db:migrate",
+    "db:push": "deno task --cwd packages/db db:push",
+    "db:pull": "deno task --cwd packages/db db:pull",
+    "db:studio": "deno task --cwd packages/db db:studio",
 
     // -- SUPABASE --
     "supabase": "./node_modules/supabase/bin/supabase --workdir apps",
