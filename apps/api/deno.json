@@ -1,6 +1,4 @@
 {
-	"name": "@workspace/api",
-	"exports": "./index.ts",
 	"tasks": {
 		"dev": "deno run -A --env-file --watch src/index.ts"
 	},

@@ -53,5 +53,10 @@
     "singleQuote": true,
     "proseWrap": "preserve",
     "semiColons": false
+  },
+  "lint":{
+    "exclude": [
+      "apps/spa/src/routeTree.gen.ts"
+    ]
   }
 }
