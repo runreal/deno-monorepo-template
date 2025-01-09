@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "tasks": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "imports": {
+    "@astrojs/starlight": "npm:@astrojs/starlight@0.30.5",
+    "astro": "npm:astro@5.1.3",
+    "sharp": "npm:sharp@0.33.5"
+  }
+}
