@@ -9,7 +9,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 ├── apps                         # Apps
 │    ├── api                     # Hono + Trpc
 │    ├── docs                    # Docs Astro + Starlight
-     ├── supabase                # Supabase
+│    ├── supabase                # Supabase
 │    ├── spa                     # React + Vite + Tanstack Router + Tanstack Query + Trpc
 │    └── ...
 ├── packages                     # Shared packages between apps
