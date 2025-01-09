@@ -6,4 +6,5 @@ const client = postgres(Deno.env.get('DATABASE_URL')!)
 const db = drizzle({ client })
 
 export { client, db, schema }
+export * from 'drizzle-orm'
 export * from './types.ts'

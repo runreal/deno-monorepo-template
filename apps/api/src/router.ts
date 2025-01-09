@@ -1,7 +1,7 @@
 import { initTRPC } from '@trpc/server'
 import { z } from 'zod'
 
-import { db, type InsertUser, schema } from '@workspace/db'
+import { db, eq, type InsertUser, schema } from '@workspace/db'
 import { createDummyUser } from './index.ts'
 
 const t = initTRPC.create()
@@ -29,6 +29,9 @@ export const appRouter = router({
 	}),
 	getUsers: publicProcedure.query(async () => {
 		return await db.select().from(schema.users)
+	}),
+	getUserById: publicProcedure.input(z.string()).query(async ({ input }) => {
+		return await db.select().from(schema.users).where(eq(schema.users.id, input))
 	}),
 })
 
