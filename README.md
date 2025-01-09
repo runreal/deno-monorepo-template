@@ -8,6 +8,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 .
 ├── apps                         # Apps
 │    ├── api                     # Hono + Trpc
+│    ├── docs                    # Docs Astro + Starlight
 │    ├── supabase                # Supabase
 │    ├── spa                     # React + Vite + Tanstack Router + Tanstack Query + Trpc
 │    └── ...
@@ -27,12 +28,15 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 
 ## What's included
 
+- [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build)
 - [Drizzle](https://drizzle.team/)
 - [Hono](https://hono.dev/)
 - [Supabase](https://supabase.com/)
+- [React](https://react.dev) + [Vite](https://vitejs.dev/)
 - [Tanstack Router](https://tanstack.com/router/latest)
 - [Tanstack Query](https://tanstack.com/query/latest)
 - [Trpc](https://trpc.io/)
+
 
 ## Getting Started
 
@@ -73,7 +77,7 @@ deno task dev:web
 
 - [ ] Add tests with Vitest
 - [ ] Docker images for each app
-- [ ] Add documentation website with Astro Starlight
+- [x] Add documentation website with Astro Starlight
 - [ ] Add a NextJS app in the monorepo
 
 ## Contributing

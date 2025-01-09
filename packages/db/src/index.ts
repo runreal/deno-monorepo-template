@@ -9,4 +9,5 @@ const db: PostgresJsDatabase<Record<string, never>> & {
 } = drizzle({ client })
 
 export { client, db, schema }
+export * from 'drizzle-orm'
 export * from './types.ts'
