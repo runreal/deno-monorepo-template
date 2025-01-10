@@ -25,6 +25,7 @@
 		"@deno/vite-plugin": "npm:@deno/vite-plugin@1.0.2",
 		"@tanstack/router-devtools": "npm:@tanstack/router-devtools@1.95.1",
 		"@tanstack/router-plugin": "npm:@tanstack/router-plugin@1.95.1",
-		"supports-color": "npm:supports-color@10.0.0"
+		"supports-color": "npm:supports-color@10.0.0",
+		"@testing-library/react": "npm:@testing-library/react@16.1.0"
 	}
 }

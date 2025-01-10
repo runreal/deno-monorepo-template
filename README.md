@@ -68,11 +68,16 @@ deno task dev:api
 ```shell
 deno task dev:web
 ```
+7. Run the tests
+
+```shell
+deno test --allow env
+```
 
 ## Todo
 
-- [ ] Add tests with Vitest
-- [ ] Docker images for each app
+- [ ] Add tests with Vitest (Currently using Deno test)
+- [X] Docker images for each app
 - [ ] Add documentation website with Astro Starlight
 - [ ] Add a NextJS app in the monorepo
 
