@@ -3,38 +3,38 @@
     "./apps/api",
     "./apps/supabase",
     "./apps/spa",
+    "./apps/next-app",
     "./packages/db",
     "./packages/lib"
   ],
   "nodeModulesDir": "auto",
-  "unstable": ["unsafe-proto"],
+  "unstable": [
+    "unsafe-proto"
+  ],
   "compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "react",
-		"strict": true,
-		"lib": [
-		  "dom",
-		  "dom.iterable",
-		  "dom.asynciterable",
-		  "deno.ns",
-		  "deno.unstable"
-		]
-	  },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "strict": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
+  },
   "tasks": {
     // -- CHORES --
     "clean": "rm -rf node_modules",
-
     // -- DEV --
     "dev:api": "deno task --cwd apps/api dev",
     "dev:web": "deno task --cwd apps/spa dev",
-
     // -- DB --
     "db:generate": "deno task --cwd packages/db db:generate",
     "db:migrate": "deno task --cwd packages/db db:migrate",
     "db:push": "deno task --cwd packages/db db:push",
     "db:pull": "deno task --cwd packages/db db:pull",
     "db:studio": "deno task --cwd packages/db db:studio",
-
     // -- SUPABASE --
     "supabase": "./node_modules/supabase/bin/supabase --workdir apps",
     "supabase:status": "./node_modules/supabase/bin/supabase status --workdir apps",
@@ -46,7 +46,10 @@
     "supabase:generate": "./node_modules/supabase/bin/supabase gen types  --workdir apps --lang=typescript --local --schema public > ./apps/supabase/types.ts"
   },
   "fmt": {
-    "include": ["packages/", "apps/"],
+    "include": [
+      "packages/",
+      "apps/"
+    ],
     "useTabs": true,
     "lineWidth": 120,
     "indentWidth": 2,
@@ -54,7 +57,7 @@
     "proseWrap": "preserve",
     "semiColons": false
   },
-  "lint":{
+  "lint": {
     "exclude": [
       "apps/spa/src/routeTree.gen.ts"
     ]

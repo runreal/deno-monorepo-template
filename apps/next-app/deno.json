@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "imports": {
+    "react": "npm:react@^19.0.0",
+    "react-dom": "npm:react-dom@^19.0.0",
+    "next": "npm:next@15.1.4",
+    "@types/node": "npm:@types/node@^20",
+    "@types/react": "npm:@types/react@^19",
+    "@types/react-dom": "npm:@types/react-dom@^19",
+    "postcss": "npm:postcss@^8",
+    "tailwindcss": "npm:tailwindcss@^3.4.1"
+  }
+}
