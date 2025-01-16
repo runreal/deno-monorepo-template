@@ -1,0 +1,12 @@
+{
+	"name": "@workspace/auth",
+	"version": "0.1.0",
+	"exports": "./auth.ts",
+	"fmt": {
+		"semiColons": false
+	},
+	"tasks": {},
+	"imports": {
+		"better-auth": "npm:better-auth@1.1.11"
+	}
+}
