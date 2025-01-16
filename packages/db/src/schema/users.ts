@@ -1,6 +1,6 @@
-import { boolean, pgTable, text, timestamp } from 'drizzle-orm/pg-core'
+import { boolean, text, timestamp } from 'drizzle-orm/pg-core'
+import { pgTable } from 'drizzle-orm/pg-core'
 
-// Here we have a slow-type see : https://jsr.io/docs/about-slow-types#explicit-types
 export const users = pgTable('users', {
 	id: text('id').primaryKey(),
 	name: text('name').notNull(),
@@ -9,4 +9,9 @@ export const users = pgTable('users', {
 	image: text('image'),
 	createdAt: timestamp('createdAt').notNull(),
 	updatedAt: timestamp('updatedAt').notNull(),
+	twoFactorEnabled: boolean('twoFactorEnabled'),
+	role: text('role'),
+	banned: boolean('banned'),
+	banReason: text('banReason'),
+	banExpires: timestamp('banExpires'),
 })

@@ -4,7 +4,9 @@
     "./apps/supabase",
     "./apps/spa",
     "./packages/db",
-    "./packages/lib"
+    "./packages/lib",
+	"./packages/auth"
+
   ],
   "nodeModulesDir": "auto",
   "unstable": ["unsafe-proto"],

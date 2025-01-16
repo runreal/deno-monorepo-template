@@ -8,7 +8,7 @@ import { routeTree } from './routeTree.gen.ts'
 import { httpBatchLink } from '@trpc/client'
 import { createTRPCQueryUtils, createTRPCReact } from '@trpc/react-query'
 
-import { AppRouter } from '../../api/src/router.ts'
+import type { AppRouter } from '../../api/src/router.ts'
 
 const queryClient = new QueryClient()
 import './index.css'
@@ -17,10 +17,11 @@ export const trpc = createTRPCReact<AppRouter>({})
 export const trpcClient = trpc.createClient({
 	links: [
 		httpBatchLink({
-			// since we are using Vinxi, the server is running on the same port,
-			// this means in dev the url is `http://localhost:3000/trpc`
 			// and since its from the same origin, we don't need to explicitly set the full URL
 			url: 'http://localhost:3001/trpc',
+			fetch(url, option) {
+				return fetch(url, { ...option, credentials: 'include' })
+			},
 		}),
 	],
 })
