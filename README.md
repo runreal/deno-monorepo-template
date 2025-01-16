@@ -1,4 +1,21 @@
-# Deno Monorepo Starter Kit
+<p align="center">
+<img src="image.png " alt="Deno Monorepo Starter Kit" />
+</p>
+
+
+<p align="center">
+	<h1 align="center"><b>Deno Monorepo Starter Kit</b></h1>
+<p align="center">
+    An deno open-source starter kit made by <a href="https://www.runreal.dev">Runreal</a>.
+    <br />
+    <br />
+    <a href="https://github.com/runreal/deno-monorepo-template/issues"><strong>Issues</strong></a> ·
+    <a href="#whats-included"><strong>What's included</strong></a> ·
+    <a href="#prerequisites"><strong>Prerequisites</strong></a> ·
+    <a href="#getting-started"><strong>Getting Started</strong></a>
+  </p>
+</p>
+
 
 Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, Tanstack Query, Hono, Trpc, Drizzle, Supabase, and more.
 
@@ -13,6 +30,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 │    └── ...
 ├── packages                     # Shared packages between apps
 │    ├── lib                     # Simple lib
+│    ├── auth                    # Auth: BetterAuth
 │    ├── db                      # Database: Drizzle
 │    └── ...
 ├── deno.jsonc                   # Deno Workspace configuration
@@ -20,7 +38,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 └── README.md
 ```
 
-## Pre-requisites
+## Prerequisites
 
 - [Deno](https://deno.land/)
 
