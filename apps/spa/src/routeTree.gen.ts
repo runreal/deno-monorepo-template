@@ -26,157 +26,157 @@ const IndexLazyImport = createFileRoute('/')()
 // Create/Update Routes
 
 const AboutLazyRoute = AboutLazyImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRoute,
+	id: '/about',
+	path: '/about',
+	getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/about.lazy.tsx').then((d) => d.Route))
 
 const LoginRoute = LoginImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRoute,
+	id: '/login',
+	path: '/login',
+	getParentRoute: () => rootRoute,
 } as any)
 
 const HelloRoute = HelloImport.update({
-  id: '/hello',
-  path: '/hello',
-  getParentRoute: () => rootRoute,
+	id: '/hello',
+	path: '/hello',
+	getParentRoute: () => rootRoute,
 } as any)
 
 const IndexLazyRoute = IndexLazyImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRoute,
+	id: '/',
+	path: '/',
+	getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy.tsx').then((d) => d.Route))
 
 const PostsIndexRoute = PostsIndexImport.update({
-  id: '/posts/',
-  path: '/posts/',
-  getParentRoute: () => rootRoute,
+	id: '/posts/',
+	path: '/posts/',
+	getParentRoute: () => rootRoute,
 } as any)
 
 const PostsPostIdRoute = PostsPostIdImport.update({
-  id: '/posts/$postId',
-  path: '/posts/$postId',
-  getParentRoute: () => rootRoute,
+	id: '/posts/$postId',
+	path: '/posts/$postId',
+	getParentRoute: () => rootRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/hello': {
-      id: '/hello'
-      path: '/hello'
-      fullPath: '/hello'
-      preLoaderRoute: typeof HelloImport
-      parentRoute: typeof rootRoute
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginImport
-      parentRoute: typeof rootRoute
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/posts/$postId': {
-      id: '/posts/$postId'
-      path: '/posts/$postId'
-      fullPath: '/posts/$postId'
-      preLoaderRoute: typeof PostsPostIdImport
-      parentRoute: typeof rootRoute
-    }
-    '/posts/': {
-      id: '/posts/'
-      path: '/posts'
-      fullPath: '/posts'
-      preLoaderRoute: typeof PostsIndexImport
-      parentRoute: typeof rootRoute
-    }
-  }
+	interface FileRoutesByPath {
+		'/': {
+			id: '/'
+			path: '/'
+			fullPath: '/'
+			preLoaderRoute: typeof IndexLazyImport
+			parentRoute: typeof rootRoute
+		}
+		'/hello': {
+			id: '/hello'
+			path: '/hello'
+			fullPath: '/hello'
+			preLoaderRoute: typeof HelloImport
+			parentRoute: typeof rootRoute
+		}
+		'/login': {
+			id: '/login'
+			path: '/login'
+			fullPath: '/login'
+			preLoaderRoute: typeof LoginImport
+			parentRoute: typeof rootRoute
+		}
+		'/about': {
+			id: '/about'
+			path: '/about'
+			fullPath: '/about'
+			preLoaderRoute: typeof AboutLazyImport
+			parentRoute: typeof rootRoute
+		}
+		'/posts/$postId': {
+			id: '/posts/$postId'
+			path: '/posts/$postId'
+			fullPath: '/posts/$postId'
+			preLoaderRoute: typeof PostsPostIdImport
+			parentRoute: typeof rootRoute
+		}
+		'/posts/': {
+			id: '/posts/'
+			path: '/posts'
+			fullPath: '/posts'
+			preLoaderRoute: typeof PostsIndexImport
+			parentRoute: typeof rootRoute
+		}
+	}
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexLazyRoute
-  '/hello': typeof HelloRoute
-  '/login': typeof LoginRoute
-  '/about': typeof AboutLazyRoute
-  '/posts/$postId': typeof PostsPostIdRoute
-  '/posts': typeof PostsIndexRoute
+	'/': typeof IndexLazyRoute
+	'/hello': typeof HelloRoute
+	'/login': typeof LoginRoute
+	'/about': typeof AboutLazyRoute
+	'/posts/$postId': typeof PostsPostIdRoute
+	'/posts': typeof PostsIndexRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexLazyRoute
-  '/hello': typeof HelloRoute
-  '/login': typeof LoginRoute
-  '/about': typeof AboutLazyRoute
-  '/posts/$postId': typeof PostsPostIdRoute
-  '/posts': typeof PostsIndexRoute
+	'/': typeof IndexLazyRoute
+	'/hello': typeof HelloRoute
+	'/login': typeof LoginRoute
+	'/about': typeof AboutLazyRoute
+	'/posts/$postId': typeof PostsPostIdRoute
+	'/posts': typeof PostsIndexRoute
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexLazyRoute
-  '/hello': typeof HelloRoute
-  '/login': typeof LoginRoute
-  '/about': typeof AboutLazyRoute
-  '/posts/$postId': typeof PostsPostIdRoute
-  '/posts/': typeof PostsIndexRoute
+	__root__: typeof rootRoute
+	'/': typeof IndexLazyRoute
+	'/hello': typeof HelloRoute
+	'/login': typeof LoginRoute
+	'/about': typeof AboutLazyRoute
+	'/posts/$postId': typeof PostsPostIdRoute
+	'/posts/': typeof PostsIndexRoute
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/hello' | '/login' | '/about' | '/posts/$postId' | '/posts'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/hello' | '/login' | '/about' | '/posts/$postId' | '/posts'
-  id:
-    | '__root__'
-    | '/'
-    | '/hello'
-    | '/login'
-    | '/about'
-    | '/posts/$postId'
-    | '/posts/'
-  fileRoutesById: FileRoutesById
+	fileRoutesByFullPath: FileRoutesByFullPath
+	fullPaths: '/' | '/hello' | '/login' | '/about' | '/posts/$postId' | '/posts'
+	fileRoutesByTo: FileRoutesByTo
+	to: '/' | '/hello' | '/login' | '/about' | '/posts/$postId' | '/posts'
+	id:
+		| '__root__'
+		| '/'
+		| '/hello'
+		| '/login'
+		| '/about'
+		| '/posts/$postId'
+		| '/posts/'
+	fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexLazyRoute: typeof IndexLazyRoute
-  HelloRoute: typeof HelloRoute
-  LoginRoute: typeof LoginRoute
-  AboutLazyRoute: typeof AboutLazyRoute
-  PostsPostIdRoute: typeof PostsPostIdRoute
-  PostsIndexRoute: typeof PostsIndexRoute
+	IndexLazyRoute: typeof IndexLazyRoute
+	HelloRoute: typeof HelloRoute
+	LoginRoute: typeof LoginRoute
+	AboutLazyRoute: typeof AboutLazyRoute
+	PostsPostIdRoute: typeof PostsPostIdRoute
+	PostsIndexRoute: typeof PostsIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexLazyRoute: IndexLazyRoute,
-  HelloRoute: HelloRoute,
-  LoginRoute: LoginRoute,
-  AboutLazyRoute: AboutLazyRoute,
-  PostsPostIdRoute: PostsPostIdRoute,
-  PostsIndexRoute: PostsIndexRoute,
+	IndexLazyRoute: IndexLazyRoute,
+	HelloRoute: HelloRoute,
+	LoginRoute: LoginRoute,
+	AboutLazyRoute: AboutLazyRoute,
+	PostsPostIdRoute: PostsPostIdRoute,
+	PostsIndexRoute: PostsIndexRoute,
 }
 
 export const routeTree = rootRoute
-  ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+	._addFileChildren(rootRouteChildren)
+	._addFileTypes<FileRouteTypes>()
 
 /* ROUTE_MANIFEST_START
 {

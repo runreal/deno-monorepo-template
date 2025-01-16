@@ -33,6 +33,7 @@ Fully type safe mono repo starter kit with Deno, React, Vite, Tanstack Router, T
 - [Tanstack Router](https://tanstack.com/router/latest)
 - [Tanstack Query](https://tanstack.com/query/latest)
 - [Trpc](https://trpc.io/)
+- [BetterAuth](https://www.better-auth.com/)
 
 ## Getting Started
 

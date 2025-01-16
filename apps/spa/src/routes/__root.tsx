@@ -1,33 +1,29 @@
-import {
-	Outlet,
-	createRootRouteWithContext,
-	useNavigate,
-} from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { createRootRouteWithContext, Outlet, useNavigate } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-import type { trpcQueryUtils } from "../main.tsx";
-import { useSession } from "../lib/auth-client.ts";
-import { useEffect } from "react";
+import type { trpcQueryUtils } from '../main.tsx'
+import { useSession } from '../lib/auth-client.ts'
+import { useEffect } from 'react'
 export const Route = createRootRouteWithContext<{
-	trpcQueryUtils: typeof trpcQueryUtils;
+	trpcQueryUtils: typeof trpcQueryUtils
 }>()({
 	component: RootComponent,
-});
+})
 
 function RootComponent() {
-	const { data, isPending, error } = useSession();
-	const navigate = useNavigate();
-	console.log("data", data, "isPending", isPending);
+	const { data, isPending, error } = useSession()
+	const navigate = useNavigate()
+	console.log('data', data, 'isPending', isPending)
 	useEffect(() => {
-		if (isPending) return;
+		if (isPending) return
 		if (!data?.session) {
-			if (!location.pathname.includes("/login")) {
-				navigate({ to: "/login" });
-				return;
+			if (!location.pathname.includes('/login')) {
+				navigate({ to: '/login' })
+				return
 			}
 		}
-	}, [data, navigate, isPending]);
+	}, [data, navigate, isPending])
 
 	return (
 		<>
@@ -38,6 +34,5 @@ function RootComponent() {
 			<TanStackRouterDevtools />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</>
-	);
+	)
 }
-
