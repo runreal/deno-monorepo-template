@@ -2,9 +2,9 @@ import { createRootRouteWithContext, Outlet, useNavigate } from '@tanstack/react
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-import type { trpcQueryUtils } from '../main.tsx'
 import { useSession } from '../lib/auth-client.ts'
 import { useEffect } from 'react'
+import { trpcQueryUtils } from '../lib/query.ts'
 export const Route = createRootRouteWithContext<{
 	trpcQueryUtils: typeof trpcQueryUtils
 }>()({

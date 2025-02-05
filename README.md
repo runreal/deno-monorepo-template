@@ -66,13 +66,12 @@ deno install --allow-scripts
 3. Launch the database
 
 ```shell
-deno task db:start
+deno task supabase:start
 ```
 
 4. Run the migrations
 
 ```shell
-cd packages/db
 deno task db:migrate
 ```
 

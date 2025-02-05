@@ -7,7 +7,7 @@ export const Route = createFileRoute('/login')({
 
 function RouteComponent() {
 	return (
-		<div>
+		<div className='flex h-full justify-center items-center'>
 			<button
 				type='button'
 				onClick={async () => {

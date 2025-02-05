@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { trpc } from '../../main.tsx'
+import { trpc } from '../../lib/query.ts'
+import { Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/posts/')({
 	loader: async ({ context: { trpcQueryUtils } }) => await trpcQueryUtils.getUsers.ensureData(),
@@ -12,9 +13,9 @@ function Posts() {
 	return (
 		<div>
 			{data?.data?.map((user) => (
-				<div key={user.id}>
+				<Link to={'/posts/$postId'} params={{ postId: user.id }} key={user.id}>
 					{user.name}
-				</div>
+				</Link>
 			))}
 		</div>
 	)

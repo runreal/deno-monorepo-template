@@ -9,7 +9,6 @@ export const Route = createFileRoute('/posts/$postId')({
 				id: params.postId,
 				title: `Post ${params.postId}`,
 			},
-			foo: 'bar',
 		}
 	},
 	pendingComponent: () => <div>Loading...</div>,
@@ -17,5 +16,5 @@ export const Route = createFileRoute('/posts/$postId')({
 
 function RouteComponent() {
 	const { post } = Route.useLoaderData()
-	return <div>Post {post.id} - {post.title}</div>
+	return <div>{post.title}</div>
 }
