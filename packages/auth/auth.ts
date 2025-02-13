@@ -1,6 +1,6 @@
 import { betterAuth } from 'better-auth'
-import { magicLink, openAPI } from 'better-auth/plugins'
-import { drizzleAdapter } from 'better-auth/adapters/drizzle'
+import { magicLink, openAPI } from 'npm:better-auth/plugins'
+import { drizzleAdapter } from 'npm:better-auth/adapters/drizzle'
 
 import { db, schema } from '@workspace/db'
 
