@@ -1,5 +1,5 @@
 {
 	"imports": {
-		"supabase": "npm:supabase@2.2.1"
+		"supabase": "npm:supabase@2.72.7"
 	}
 }
